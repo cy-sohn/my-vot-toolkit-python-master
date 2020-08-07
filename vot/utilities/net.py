@@ -127,6 +127,7 @@ def download_uncompress(url, path):
     tmp_file = tempfile.mktemp(suffix=ext)
     try:
         download(url, tmp_file)
+        print(f"url : {url}, end download..")
         if zipfile.is_zipfile(temp_file) is True:
             extract_files(tmp_file, path)
     finally:

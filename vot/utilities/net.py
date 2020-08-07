@@ -129,7 +129,7 @@ def download_uncompress(url, path):
         print(f"start download url : {url}")
         download(url, tmp_file)
         print("end download..")
-        if zipfile.is_zipfile(temp_file) is True:
+        if zipfile.is_zipfile(tmp_file) is True:
             extract_files(tmp_file, path)
     finally:
         if os.path.exists(tmp_file):
